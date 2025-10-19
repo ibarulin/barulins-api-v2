@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/processImage.py",
+      "src": "api/process_image.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/api/processImage",
-      "dest": "api/processImage.py"
+      "src": "/(.*)",
+      "dest": "api/process_image.py"
     }
   ]
 }
